@@ -99,6 +99,7 @@ namespace CSharp8._0
             Console.WriteLine();
 
             Console.ReadKey(false);
+            Console.Clear();
 
             /* struct在C#中被用来定义结构，它是一种比类小的数据类型。和类一样都是创建对象的模板，可以有自己的数据以及处理和访问数据的方法。
              * 

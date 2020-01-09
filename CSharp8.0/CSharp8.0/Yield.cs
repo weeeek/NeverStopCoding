@@ -20,19 +20,17 @@ namespace CSharp8._0
             Console.WriteLine();
             Console.ReadKey(false);
 
-            // 
-            
-            Console.ReadKey(false);
+            // 导出Excel时，我们希望数据错误时，跳过错误数据，继续导出后面的数据，并把错误数据做额外操作（异常处理或者使用别的展示方式）
+
+            foreach (var item in ExportData)
+            {
+                Console.WriteLine(item);
+            }
+            Console.Clear();
         }
 
         //位置数据类型
-        public static List<object> ObjectData
-        {
-            get
-            {
-                return new List<object>() { false, 0, 1, null, 2 };
-            }
-        }
+        public static List<Point> PointData = new List<Point>() { new Point(1, 0), new Point(0, 1), new Point(1, 1), new Point(0, 0), new Point(2, 2), new Point(1, 1) };
 
         //申明属性，定义数据来源
         public static List<int> Data
@@ -74,6 +72,16 @@ namespace CSharp8._0
                         Console.Write(" ");
                         yield return item;
                     }
+                }
+            }
+        }
+
+        //
+        public static IEnumerable<double> ExportData {
+            get {
+                foreach (var item in PointData)
+                {
+                    yield return item.X / item.Y;
                 }
             }
         }

@@ -47,7 +47,7 @@ namespace CSharp8._0
             Holidays.Christmas => FromAddress(customer, originPrice * 0.95),
             Holidays.NewYear => FromAddress(customer, originPrice * 0.8),
             Holidays.Lantern => FromAddress(customer, originPrice * 0.9),
-            _ => 0.0
+            _ => 1.0
         };
 
         // 属性模式
@@ -56,7 +56,7 @@ namespace CSharp8._0
             { Area: Area.HK } => originPrice + 1,
             { Area: Area.HY } => originPrice + 2,
             { Area: Area.WC } => originPrice + 3,
-            _ => 0.0
+            _ => originPrice
         };
 
         // 元组模式，剪刀石头布。

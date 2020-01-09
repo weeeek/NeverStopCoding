@@ -181,6 +181,9 @@ namespace CSharp8._0
                     但是也因为他增加了一个Key,Dictionary占用的内存空间比其他类型要大。
                     他是通过Key来查找元素的，元素的顺序是不定的。
 
+                HashSet：
+                    见DataStructure.cs
+　　                
 
                 类型	 确定大小	确定类型	索引速度	性能
                 数组	    Y	       Y	      很快	    最高

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using CSharp8._0.Helper;
@@ -21,19 +22,17 @@ namespace CSharp8._0
             exp = exp.And(s => s.Id == TargetId);
 
             // 第一个满足就返回，不检查后续重复
-            Console.WriteLine("First" + ActionExtension.Profiler(() => db.ClockInfo.First(exp), 1));
-            Console.WriteLine("Single" + ActionExtension.Profiler(() => db.ClockInfo.Single(exp), 1));
+            //Console.WriteLine("First" + ActionExtension.Profiler(() => db.ClockInfo.First(exp), 1));
+            //Console.WriteLine("Single" + ActionExtension.Profiler(() => db.ClockInfo.Single(exp), 1));
 
-            // 根据主键 find，所有主键都要传
-            Console.WriteLine("Find" + ActionExtension.Profiler(() => db.ClockInfo.Find(TargetId, TargetTime), 1));
-            // 需要 using System.Linq;
-            exp = exp.And(s => s.ClockDate == TargetTime);
-            // Single总是迭代整个集合，即使它在列表的开始处发现它。并检查重复。通常用于账号相关。
-            Console.WriteLine("Single" + ActionExtension.Profiler(() => db.ClockInfo.Single(exp), 1));
-            // 第一个满足就返回，不检查后续重复
-            Console.WriteLine("First" + ActionExtension.Profiler(() => db.ClockInfo.First(exp), 1));
-
-            Console.WriteLine("单主键");
+            //// 根据主键 find，所有主键都要传
+            //Console.WriteLine("Find" + ActionExtension.Profiler(() => db.ClockInfo.Find(TargetId, TargetTime), 1));
+            //// 需要 using System.Linq;
+            //exp = exp.And(s => s.ClockDate == TargetTime);
+            //// Single总是迭代整个集合，即使它在列表的开始处发现它。并检查重复。通常用于账号相关。
+            //Console.WriteLine("Single" + ActionExtension.Profiler(() => db.ClockInfo.Single(exp), 1));
+            //// 第一个满足就返回，不检查后续重复
+            //Console.WriteLine("First" + ActionExtension.Profiler(() => db.ClockInfo.First(exp), 1));
 
 
 
@@ -58,6 +57,15 @@ namespace CSharp8._0
 
             // 交集
             Console.WriteLine(String.Join(" ", arrA.Intersect(arrB))); // 3，4
+
+
+            var collection = new List<int>();
+
+            foreach (var item in arrA)
+            {
+                var target = arrB.FirstOrDefault(s => s == item);
+                collection.Add(target);
+            }
         }
     }
 }
