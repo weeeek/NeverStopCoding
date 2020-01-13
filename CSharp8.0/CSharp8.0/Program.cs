@@ -51,39 +51,39 @@ namespace CSharp8._0
             // new ClassAndStruct().Main();
 
             // C# 2.0 Yield
-            new Yield().Main();
+            // new Yield().Main();
 
             // C# 3.0 Lambda
-            new LambdaExpression().Main();
+            // new LambdaExpression().Main();
 
             // C# 4.0 逆变(contravariant)与协变(covariant)
-            new ContravariantAndCovariant().Main();
+            // new ContravariantAndCovariant().Main();
 
             // C# 7.0 out,in,ref
-            new OutInRef().Main();
+            // new OutInRef().Main();
 
             // C# 7.0 Tuples
-            new Tuples().Main();
+            // new Tuples().Main();
 
             // C# 7.2 条件 ref 表达式
-            var arr = new int[] { 1, 2, 3 };
-            var otherArr = new int[] { 4, 5, 6 };
-            ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
-            Console.WriteLine(r);
+            //var arr = new int[] { 1, 2, 3 };
+            //var otherArr = new int[] { 4, 5, 6 };
+            //ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+            //Console.WriteLine(r);
 
             // C# 8.0 Const Static
-            new ConstAndStatic().Main();
+            // new ConstAndStatic().Main();
 
             // C# 8.0 Switch-Expressions
-            new SwitchExpressions().Main();
+            // new SwitchExpressions().Main();
 
             // C# 8.0 Indices-and-Ranges
-            new IndicesAndRanges().Main(numbers);
+            // new IndicesAndRanges().Main(numbers);
 
             // Dictionary、Hashtable、List、ArrayList
             new DictionaryAndHashtable().Main(numbers);
 
-            new StringBuilderAndString().Main();
+            // new StringBuilderAndString().Main();
 
 
             /* 利用using和try/finally语句来清理资源(使用流时)

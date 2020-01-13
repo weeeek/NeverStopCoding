@@ -53,7 +53,8 @@ namespace CSharp8._0
             Compare(10);
             Compare(10000);
             Compare(5000000);
-            Console.ReadLine();
+            Console.WriteLine("-------done-------");
+            Console.ReadKey(false);
         }
         public static void Compare(int dataCount)
         {
@@ -179,14 +180,29 @@ namespace CSharp8._0
                     在初始化的时候也必须指定其类型，而且他还需要指定一个Key,并且这个Key是唯一的。
                     正因为这样，Dictionary的索引速度非常快。
                     但是也因为他增加了一个Key,Dictionary占用的内存空间比其他类型要大。
-                    他是通过Key来查找元素的，元素的顺序是不定的。
+                    他是通过Key来查找元素的，速度快，但是消耗内存。元素的顺序是不定的。
 
                 HashSet：
                     见DataStructure.cs
-　　                
+
+　　            动态数组(ArrayList)：
+                    1、ArrayList的底层其实就是一个数组
+                    2、不必在声明时指定长度，会根据存储的数据动态增加或减少长度
+                    3、插入和删除一个元素时，会移动它之后所有元素的位置，效率低，频繁进行插入删除元素时推荐使用LinkedList
+                    4、ArrayList会把所有元素都当做Object处理，因此可以存储不同类型的元素
+                    5、ArrayList是非类型安全的，而且在插入和删除元素时会进行拆箱和装箱的操作，消耗性能，效率低
+
+                 泛型List：
+                    1、List是ArrayList的泛型等效类
+                    2、需要在声明时通过泛型指定类型
+                    3、没有拆箱装箱操作，因此在大多数情况下List要比ArrayList效率高且类型安全
+
+                 链表(LinkedList):
+                    1、链表在内存中的空间不是连续的，每块空间称作一个节点，每个节点都存有与它之前（单向链表“或”，双向链表“和”）之后相连接的节点的地址，因此向链表中添加和删除元素时只需要更改相关节点存储的地址的指向，效率高
+                    2、查找元素时不能通过下标访问，只能从头开始通过地址按顺序查找，效率低
 
                 类型	 确定大小	确定类型	索引速度	性能
-                数组	    Y	       Y	      很快	    最高
+                Array	    Y	       Y	      很快	    最高
                 ArrayList   N	       N       	  一般       低
                 List	    N	       Y     	  很快   	 高
                 Dictionary	N	       Y    	  最快  	一般
@@ -194,5 +210,4 @@ namespace CSharp8._0
              */
         }
     }
-
 }
