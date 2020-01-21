@@ -69,7 +69,7 @@ namespace CSharp8._0
                 {
                     if (item > 4)
                     {
-                        Console.Write(" ");
+                        Console.Write(" | ");
                         yield return item;
                     }
                 }

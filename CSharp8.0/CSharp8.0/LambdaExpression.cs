@@ -66,6 +66,8 @@ namespace CSharp8._0
                 var target = arrB.FirstOrDefault(s => s == item);
                 collection.Add(target);
             }
+
+            Console.ReadKey(false);
         }
     }
 }

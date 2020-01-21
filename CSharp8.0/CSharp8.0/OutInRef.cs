@@ -8,9 +8,10 @@ namespace CSharp8._0
     {
         public void Main() {
             /*
-             * in:过程不会改写in的内容
+             * in:过程不会改写in的内容  只读
              * out:传入的值不会被过程所读取,但过程可以写
              * ref:传入的值,过程会读,也会写
+             * Params：
              */
 
             Console.WriteLine(In(1, 2, 300));

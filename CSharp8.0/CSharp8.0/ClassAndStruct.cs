@@ -43,19 +43,14 @@ namespace CSharp8._0
              * 一、从赋值的角度体验struct和class的不同
                 引用类型赋值，是把地址赋值给了变量
             */
-
-
-
-
-
-
+            Console.ReadKey(false);
             SizeClass oldSizeClass = new SizeClass() { Width = 10 };
             Console.WriteLine("赋值前：width={0}", oldSizeClass.Width); // 10
 
             SizeClass newSizeClass = new SizeClass() { Width = oldSizeClass.Width };
             newSizeClass.Width = 30;
-            Console.WriteLine("旧对象：width={0}", oldSizeClass.Width); // ？
-            Console.WriteLine("新对象：width={0}", newSizeClass.Width); // ？ 
+            Console.WriteLine("旧对象：width={0}", oldSizeClass.Width); // ？fz:10  30
+            Console.WriteLine("新对象：width={0}", newSizeClass.Width); // ？fz:30
 
             var copyOfSizeClass = oldSizeClass;
             copyOfSizeClass.Width = 50;
@@ -101,7 +96,8 @@ namespace CSharp8._0
             Console.ReadKey(false);
             Console.Clear();
 
-            /* struct在C#中被用来定义结构，它是一种比类小的数据类型。和类一样都是创建对象的模板，可以有自己的数据以及处理和访问数据的方法。
+            /* struct在C#中被用来定义结构，它是一种比类小的数据类型。
+             * 和类一样都是创建对象的模板，可以有自己的数据以及处理和访问数据的方法。
              * 
              * 何时使用struct，何时使用class?
              * 

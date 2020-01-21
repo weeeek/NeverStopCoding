@@ -20,11 +20,12 @@ namespace CSharp8._0
                 "the",      // 6                   ^3
                 "lazy",     // 7                   ^2
                 "dog"       // 8                   ^1
-            };              // 9 (or words.Length) ^0
+            };              // 9 (words.Length)    ^0
             // 末尾运算符 ^，使用 ^1 索引检索最后一个词
 
             // 以下代码创建了一个包含单词“quick”、“brown”和“fox”的子范围。 它包括 words[1] 到 words[3]。 元素 words[4] 不在该范围内。
             Console.WriteLine("1," + string.Join(" ", words[1..4]));
+            Console.WriteLine("2," + string.Join(" ", words[2..^0]));
             Console.WriteLine("2," + string.Join(" ", words[^2..^0]));
             Console.WriteLine("3," + string.Join(" ", words[..]));
             Console.WriteLine("4," + string.Join(" ", words[..4]));
