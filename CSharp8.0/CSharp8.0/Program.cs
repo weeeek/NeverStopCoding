@@ -8,21 +8,12 @@ namespace CSharp8._0
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Bisection.MissingNumber(new int[] { 0, 1, 3 }));
-            Console.WriteLine(Bisection.MissingNumber(new int[] { 0, 1, 2, 3, 4, 5, 7, 8, 9 }));
-            Console.WriteLine(Bisection.MissingNumber(new int[] { 0, 1, 2, 3, 5, 6, 7, 8, 9 }));
-            Console.WriteLine(Bisection.MissingNumber(new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49 }));
-
-            int iValue = 123;
-            string sValue = "456";
-            DateTime dtValue = DateTime.Now;
-            GenericMethod.Show<int>(iValue);
-            GenericMethod.Show<string>(sValue);
-            GenericMethod.Show<DateTime>(dtValue);
-            // Delegates.Run();
-            // CallBacks.Run();
             var start = DateTime.Now;
-
+            Console.WriteLine(LeetCode1646.GetMaximumGenerated(15));
+            // Console.WriteLine(LeetCode628.MaximumProduct(new int[] { -1, -2, -3, -4 }));
+            // LeetCode64.MinPathSum(new int[][] { new int[] { 1, 3, 1 }, new int[] { 1, 5, 1 }, new int[] { 4, 2, 1 } });
+            // LeetCode1013.CanThreePartsEqualSum(new int[] { 1,-1,1,-1 });
+            // LeetCode970.PowerfulIntegers(2, 1, 10);
             // LeetCode6.Convert("PAYPALISHIRING", 4);
             // LeetCode9.IsPalindrome(12321);
             // LeetCode11.MaxArea(new int[] { 2, 3, 10, 5, 7, 8, 9 });
@@ -94,7 +85,7 @@ namespace CSharp8._0
             // new IndicesAndRanges().Main(numbers);
 
             // Dictionary、Hashtable、List、ArrayList
-            Console.WriteLine(Algorithms.KMP.KmpMatch("ACBACAACAACACAACAB", "ACAACAB"));
+            // Console.WriteLine(Algorithms.KMP.KmpMatch("ACBACAACAACACAACAB", "ACAACAB"));
 
             // new DictionaryAndHashtable().Main(numbers);
 
@@ -105,16 +96,16 @@ namespace CSharp8._0
              * 使用移位运算、异或，提高效率，但是基本用不着这玩意儿
              */
 
-            Console.WriteLine(2 << 0); //  2  2x2^0
-            Console.WriteLine(2 << 1); //  4  2x2^1
-            Console.WriteLine(2 << 2); //  8  2x2^2
-            Console.WriteLine(2 << 32); // 2  2x2^2 移动32位相当于移动0位（没有移动） 
+            //Console.WriteLine(2 << 0); //  2  2x2^0
+            //Console.WriteLine(2 << 1); //  4  2x2^1
+            //Console.WriteLine(2 << 2); //  8  2x2^2
+            //Console.WriteLine(2 << 32); // 2  2x2^2 移动32位相当于移动0位（没有移动） 
 
-            Console.WriteLine(3 << 0); // 3  3x2^0
-            Console.WriteLine(3 << 1); // 6  3x2^1
-            Console.WriteLine(3 << 2); // 12 3x2^2
+            //Console.WriteLine(3 << 0); // 3  3x2^0
+            //Console.WriteLine(3 << 1); // 6  3x2^1
+            //Console.WriteLine(3 << 2); // 12 3x2^2
 
-            Console.WriteLine(8 >> 2); // 2  8/2^2
+            //Console.WriteLine(8 >> 2); // 2  8/2^2
 
             Console.WriteLine((DateTime.Now - start).TotalMilliseconds + "ms");
             Console.ReadKey();
